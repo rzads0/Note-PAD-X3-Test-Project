@@ -7,15 +7,31 @@
 //
 
 #import "AppDelegate.h"
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSLog(@"APP DIDFINISHLUNCH START ");
+    
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
+//    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+//    {
+//        UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0,320, 20)];
+//        view.backgroundColor=[UIColor darkGrayColor];
+//        [self.window.rootViewController.view addSubview:view];
+//    }
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.viewController = [[UIViewController alloc] init];
+//    self.window.rootViewController = self.viewController;
+//    [self.window makeKeyAndVisible];
+    
     return YES;
+    NSLog(@"APP DIDFINISHLUNCH END ");
+
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
